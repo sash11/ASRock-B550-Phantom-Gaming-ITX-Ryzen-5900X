@@ -1,22 +1,11 @@
-# MSI-B250M-PRO-VDH-i5-7600K
- <p align="center">
-  <img src="Docs/AboutThisMac.png" align=center">
- </p>
-  <p align="center">
-  <img src="Docs/AboutThisMac2.png" align=center">
- </p>
- <p align="center">
-  <img src="Docs/PCI.png" align=center">
- </p>
- 
+# ASRock-B550-Phantom-Gaming-ITX-Ryzen-5900X
  ## Specs
  | **Component** | **Model** |
 | ------------- | --------- |
-| CPU | i5-7600K |
-| RAM | DDR4 16GB (4x4GB) 2400MHz |
-| Audio Chipset | Realtek ALC887. Works with layout-id 1 |
+| CPU | Ryzen 9 5900X |
+| RAM | DDR4 64GB (2x32GB) 3600MHz |
+| Audio Chipset | Realtek ALC1200. Works with layout-id 1 |
 | dGPU | GeForce GT 710. Works OOB |
-| iGPU | Intel UHD Graphics 630 |
 | Lan |  Realtek 8111H Gigabit LAN controller |
 | WiFi | Fenvi T919. Works OOB |
 | OS Disk | 256GB Samsung 850 Pro SATA |
