@@ -17,7 +17,6 @@
 | Above 4G memory | Enabled |
 | SATA Mode | AHCI Mode |
 | Fast Boot | Disabled |
-| Fast Boot | Disabled |
 
 ## USB config
 Work in progress...
