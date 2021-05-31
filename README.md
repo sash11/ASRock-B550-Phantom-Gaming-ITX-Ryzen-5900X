@@ -6,8 +6,6 @@
 | RAM | DDR4 64GB (2x32GB) 3600MHz |
 | Audio Chipset | Realtek ALC1200. Works with layout-id 1 |
 | dGPU | GeForce GT 710. Works OOB |
-| Lan |  Realtek 8111H Gigabit LAN controller |
-| WiFi | Fenvi T919. Works OOB |
 | WiFi & Bluetooth | BCM94360NG Works OOB. Fits into original Intel card slot |
 | Lan |  Intel® 2.5GbE LAN I225-V |
 | OS Disk | 128GB Samsung 850 Pro SATA |
