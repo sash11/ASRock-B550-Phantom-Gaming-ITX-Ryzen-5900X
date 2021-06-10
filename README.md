@@ -9,7 +9,7 @@
 | WiFi & Bluetooth | BCM94360NG Works OOB. Fits into original Intel card slot |
 | Lan |  Intel® 2.5GbE LAN I225-V |
 | OS Disk | 128GB Samsung 850 Pro SATA |
-| macOS | Big Sur 11.4/OpenCore 0.6.9 |
+| macOS | Big Sur 11.4/OpenCore 0.7.0 |
 
 ## BIOS
 | **Setting** | **Value** |
