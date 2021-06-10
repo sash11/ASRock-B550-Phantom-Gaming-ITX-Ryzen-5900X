@@ -6,7 +6,7 @@
   <img src="Docs/PCI.png" align=center">
  </p>
  ## Specs
- | **Component** | **Model** |
+| **Component** | **Model** |
 | ------------- | --------- |
 | CPU | Ryzen 9 5900X |
 | RAM | DDR4 64GB (2x32GB) 3600MHz |
