@@ -8,15 +8,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Fixes embedded controller</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-EC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fixes CPU definitions with B550 and A520 motherboards</string>
+				<string>SSDT-CPUR.aml</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -24,15 +16,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fixes USB power</string>
+				<string>SSDT-EC-USBX-DESKTOP.aml</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-USBX.aml</string>
+				<string>SSDT-EC-USBX-DESKTOP.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SMBus</string>
+				<string>SMBUS</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -69,7 +61,46 @@
 			</dict>
 		</array>
 		<key>Patch</key>
-		<array/>
+		<array>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>Replace one byte sequence with another</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				ESIzRA==
+				</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>OemTableId</key>
+				<data>
+				</data>
+				<key>Replace</key>
+				<data>
+				RDMiEQ==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
+			</dict>
+		</array>
 		<key>Quirks</key>
 		<dict>
 			<key>FadtEnableReset</key>
@@ -216,6 +247,17 @@
 				<key>model</key>
 				<string>FCH SMBus Controller</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,3,1/0,0</string>
+				<key>device-id</key>
+				<data>
+				/2cQIA==
+				</data>
+				<key>model</key>
+				<string>Radeon RX550</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x1)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -223,7 +265,7 @@
 				<key>device_type</key>
 				<string>Audio device</string>
 				<key>model</key>
-				<string>GT710 HDMI/DP Audio Controller</string>
+				<string>Baffin HDMI/DP Audio [Radeon RX 550 640SP / RX 560/560X]</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x4)</key>
 			<dict>
@@ -314,7 +356,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string>12.0.0</string>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -392,7 +434,7 @@
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>x86_64</string>
+				<string>Any</string>
 				<key>BundlePath</key>
 				<string>RestrictEvents.kext</string>
 				<key>Comment</key>
@@ -401,6 +443,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RestrictEvents</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>AppleMCEReporterDisabler.kext</string>
+				<key>Comment</key>
+				<string>AppleMCEReporter disabler</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1969,12 +2029,14 @@
 			<true/>
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
+			<key>ProvideCurrentCpuInfo</key>
+			<false/>
 			<key>SetApfsTrimTimeout</key>
 			<integer>-1</integer>
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Scheme</key>
 		<dict>
@@ -2009,7 +2071,7 @@
 			<key>PickerMode</key>
 			<string>External</string>
 			<key>PickerVariant</key>
-			<string>Modern</string>
+			<string>Acidanthera\GoldenGate</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -2049,6 +2111,8 @@
 				<string>Not signed for security reasons</string>
 				<key>Enabled</key>
 				<false/>
+				<key>Flavour</key>
+				<string>Auto</string>
 				<key>Name</key>
 				<string>CustomOS</string>
 				<key>Path</key>
@@ -2063,6 +2127,8 @@
 			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
+			<key>AllowToggleSip</key>
+			<false/>
 			<key>ApECID</key>
 			<integer>0</integer>
 			<key>AuthRestart</key>
@@ -2074,7 +2140,7 @@
 			<key>EnablePassword</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
-			<integer>6</integer>
+			<integer>14</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>PasswordHash</key>
@@ -2101,6 +2167,8 @@
 				<string>Not signed for security reasons</string>
 				<key>Enabled</key>
 				<true/>
+				<key>Flavour</key>
+				<string>OpenShell:UEFIShell:Shell</string>
 				<key>Name</key>
 				<string>UEFI Shell</string>
 				<key>Path</key>
@@ -2116,11 +2184,13 @@
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string></string>
+				<string>CleanNvram.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
 				<key>Name</key>
-				<string>Clean Nvram</string>
+				<string>CleanNvram.efi</string>
 				<key>Path</key>
 				<string>CleanNvram.efi</string>
 				<key>RealPath</key>
@@ -2134,11 +2204,13 @@
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string></string>
+				<string>ControlMsrE2.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
 				<key>Name</key>
-				<string>ControlMsrE2</string>
+				<string>ControlMsrE2.efi</string>
 				<key>Path</key>
 				<string>ControlMsrE2.efi</string>
 				<key>RealPath</key>
@@ -2171,6 +2243,8 @@
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
+				<key>ForceDisplayRotationInEFI</key>
+				<integer>0</integer>
 				<key>SystemAudioVolume</key>
 				<data>
 				Rg==
@@ -2201,6 +2275,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
 				<string>boot-args</string>
+				<string>ForceDisplayRotationInEFI</string>
 			</array>
 		</dict>
 		<key>LegacyEnable</key>
@@ -2246,7 +2321,7 @@
 		<false/>
 		<key>Generic</key>
 		<dict>
-			<key>AdviseWindows</key>
+			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
 			<string>M0000000000000001</string>
@@ -2278,7 +2353,7 @@
 		<key>UpdateSMBIOSMode</key>
 		<string>Create</string>
 		<key>UseRawUuidEncoding</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>UEFI</key>
 	<dict>
@@ -2337,7 +2412,7 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>OpenHfsPlus.efi</string>
+			<string>HfsPlus.efi</string>
 			<string>OpenRuntime.efi</string>
 			<string>OpenCanopy.efi</string>
 			<string>AudioDxe.efi</string>
@@ -2372,7 +2447,7 @@
 			<key>ForceResolution</key>
 			<false/>
 			<key>GopPassThrough</key>
-			<false/>
+			<string>Disabled</string>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
 			<key>ProvideConsoleGop</key>
@@ -2397,6 +2472,8 @@
 			<key>AppleBootPolicy</key>
 			<false/>
 			<key>AppleDebugLog</key>
+			<false/>
+			<key>AppleEg2Info</key>
 			<false/>
 			<key>AppleFramebufferInfo</key>
 			<false/>
@@ -2453,32 +2530,7 @@
 			<false/>
 		</dict>
 		<key>ReservedMemory</key>
-		<array>
-			<dict>
-				<key>Address</key>
-				<integer>268435456</integer>
-				<key>Comment</key>
-				<string>HD3000: IGPU memory corruption errata</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Size</key>
-				<integer>268435456</integer>
-				<key>Type</key>
-				<string>Reserved</string>
-			</dict>
-			<dict>
-				<key>Address</key>
-				<integer>569344</integer>
-				<key>Comment</key>
-				<string>Fix black screen on wake from hibernation for Lenovo Thinkpad T490</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Size</key>
-				<integer>4096</integer>
-				<key>Type</key>
-				<string>RuntimeCode</string>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 </dict>
 </plist>
