@@ -26,4 +26,4 @@
 | Fast Boot | Disabled |
 
 ## USB config
-Work in progress...
+USB Map was created manually. All ports are working.
