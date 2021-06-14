@@ -32,4 +32,5 @@
 USB Map was created manually. All ports are working.
 
 ## Issues
-Intel Ethernet I225-V card is not working properly. Changing device-id and using FakePCIID kexts does not work on this board. When ethernet cable is plugged in, APIPA address is assigned and system crashes. Currently I have not found a solution to this problem.
+1. Intel Ethernet I225-V card is not working properly. Changing device-id and using FakePCIID kexts does not work on this board. When ethernet cable is plugged in, APIPA address is assigned and system crashes. Currently I have not found a solution to this problem.
+2. Reboot/Shutdown don't work. I have to use a power switch on the power supply to Reboot/Shutdown the system.
