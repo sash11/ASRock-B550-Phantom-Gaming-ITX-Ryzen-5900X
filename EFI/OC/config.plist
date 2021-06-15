@@ -46,14 +46,6 @@
 				<key>Path</key>
 				<string>SSDT-SMBUS.aml</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IMEI</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-IMEI-S.aml</string>
-			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
@@ -304,10 +296,6 @@
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,1,2/0,2/8,0/0,0</string>
-				<key>device-id</key>
-				<data>
-				8xWGgA==
-				</data>
 				<key>device_type</key>
 				<string>Ethernet controller</string>
 				<key>model</key>
@@ -536,6 +524,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>VoodooTSCSyncAMD-12Core.kext</string>
+				<key>Comment</key>
+				<string>CPU</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooTSCSyncAMD</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2325,7 +2331,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>-v slide=88</string>
+				<string>-v slide=88 keepsyms=1 swd_panic=1</string>
 				<key>csr-active-config</key>
 				<data>
 				/w8AAA==
