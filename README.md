@@ -20,7 +20,7 @@
 | Audio Chipset | Realtek ALC1220. Works with layout-id 1 |
 | dGPU | Sapphire RX550 2GB Lexa core. Works with device-id swap |
 | WiFi & Bluetooth | BCM94360NG Works OOB. Fits into original Intel card slot |
-| Lan |  Intel® 2.5GbE LAN I225-V. Currenly not working |
+| Lan |  Intel® 2.5GbE LAN I225-V. Works OOB with boot argument dk.e1000=0 |
 | OS Disk | 512GB Samsung 970 Pro NVMe |
 | macOS | Big Sur 11.4/OpenCore 0.7.0 |
 
