@@ -35,5 +35,4 @@
 USB Map was created manually. All ports are working.
 
 ## Issues
-1. Intel Ethernet I225-V card is not working properly. Changing device-id and using FakePCIID kexts does not work on this board. When ethernet cable is plugged in, APIPA address is assigned and system crashes. Currently I have not found a solution to this problem.
-2. Reboot and Shutdown have issues. System shuts down, but when trying to power back up, fans start to spin but system does not post. I have to flip the power switch to make it boot. Reboot does not work as well. Monitor shuts down, but system stays powered on. I have to use the PSU switch again. Tried ACPI quirk FadtEnableReset, but it did not help.
+1. Reboot and Shutdown have issues. System shuts down, but when trying to power back up, fans start to spin but system does not post. I have to flip the power switch to make it boot. Reboot does not work as well. Monitor shuts down, but system stays powered on. I have to use the PSU switch again. Tried ACPI quirk FadtEnableReset, but it did not help.
