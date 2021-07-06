@@ -46,6 +46,22 @@
 				<key>Path</key>
 				<string>SSDT-SMBUS.aml</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-GPRW</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-GPRW.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-IMEI-S</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-IMEI-S.aml</string>
+			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
