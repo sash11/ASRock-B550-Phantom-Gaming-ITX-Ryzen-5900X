@@ -34,5 +34,3 @@
 ## USB config
 USB Map was created manually. All ports are working.
 
-## Issues
-1. Reboot and Shutdown have issues. System shuts down, but when trying to power back up, fans start to spin but system does not post. I have to flip the power switch to make it boot. Reboot does not work as well. Monitor shuts down, but system stays powered on. I have to use the PSU switch again. Tried ACPI quirk FadtEnableReset, but it did not help.
