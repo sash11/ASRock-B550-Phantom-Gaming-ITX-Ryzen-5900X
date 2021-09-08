@@ -278,27 +278,19 @@
 				<key>model</key>
 				<string>FCH SMBus Controller</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,3,1/0,0</string>
-				<key>device-id</key>
-				<data>
-				/2cQIA==
-				</data>
-				<key>hda-gfx</key>
-				<string>onboard-2</string>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
 				<key>model</key>
-				<string>Radeon RX550</string>
+				<string>Radeon RX 5500 XT</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x1)</key>
+			<key>PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,3,1/0,1</string>
 				<key>device_type</key>
 				<string>Audio device</string>
 				<key>model</key>
-				<string>Baffin HDMI/DP Audio [Radeon RX 550 640SP / RX 560/560X]</string>
+				<string>Radeon RX 5500 XT HDMI Audio</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x3)</key>
 			<dict>
@@ -1396,7 +1388,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>-v slide=88 dk.e1000=0 keepsyms=1</string>
+				<string>-v slide=88 dk.e1000=0 agdpmod=pikera shikigva=80 unfairgva=1</string>
 				<key>csr-active-config</key>
 				<data>
 				/w8AAA==
