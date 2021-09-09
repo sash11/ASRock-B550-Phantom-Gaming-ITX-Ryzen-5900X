@@ -18,7 +18,7 @@
 | CPU | Ryzen 9 5900X |
 | RAM | DDR4 64GB (2x32GB) 3600MHz |
 | Audio Chipset | Realtek ALC1220. Works with layout-id 1 |
-| dGPU | MSI RX5500XT 8GB. Works OOB with boot argument adgpmod=pikera |
+| dGPU | MSI RX5500XT 8GB. Works OOB with boot argument agdpmod=pikera |
 | WiFi & Bluetooth | BCM94360NG Works OOB. Fits into original Intel card slot |
 | Lan |  Intel® 2.5GbE LAN I225-V. Works OOB with boot argument dk.e1000=0 |
 | OS Disk | 512GB Samsung 970 Pro NVMe |
