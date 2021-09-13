@@ -38,5 +38,5 @@ USB Map was created manually. All ports are working.
 In order for 5GHz wifi band to work, AirportBrcmFixup.kext must be used.
 In order for Reboot/Shutdown to work, HS10 USB port must be excluded from the USB map. It maps to internal LED Controller and prevents proper system Reboot/Shutdown.
 
-## Apple TV+
-In order for Apple TV+ to work I use boot arguments shikigva=80 unfairgva=1
+## DRM
+Apple TV+ works with boot arguments shikigva=80 and unfairgva=1. Netflix in Safari is working.
