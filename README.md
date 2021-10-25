@@ -1,5 +1,8 @@
 # ASRock-B550-Phantom-Gaming-ITX-Ryzen-5900X
  <p align="center">
+  <img src="Docs/AboutThisMac2.png" align=center">
+ </p>
+ <p align="center">
   <img src="Docs/AboutThisMac.png" align=center">
  </p>
  <p align="center">
