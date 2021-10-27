@@ -3,9 +3,6 @@
   <img src="Docs/AboutThisMac2.png" align=center">
  </p>
  <p align="center">
-  <img src="Docs/AboutThisMac.png" align=center">
- </p>
- <p align="center">
   <img src="Docs/PCI.png" align=center">
  </p>
   <p align="center">
@@ -23,9 +20,9 @@
 | Audio Chipset | Realtek ALC1220. Works with layout-id 1 |
 | dGPU | MSI RX5500XT 8GB. Works OOB with boot argument agdpmod=pikera |
 | WiFi & Bluetooth | BCM94360NG Works OOB. Fits into original Intel card slot |
-| Lan |  Intel® 2.5GbE LAN I225-V. Works OOB with boot argument dk.e1000=0 |
+| Lan |  Intel® 2.5GbE LAN I225-V. Does not currently work with boot argument dk.e1000=0 |
 | OS Disk | 512GB Samsung 970 Pro NVMe |
-| macOS | Big Sur 11.6/OpenCore 0.7.4 |
+| macOS | Monterey 12.0.1/OpenCore 0.7.4 |
 
 ## BIOS
 | **Setting** | **Value** |
