@@ -191,11 +191,13 @@
 			<key>ProtectUefiServices</key>
 			<false/>
 			<key>ProvideCustomSlide</key>
-			<false/>
+			<true/>
 			<key>ProvideMaxSlide</key>
 			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
 			<true/>
+			<key>ResizeAppleGpuBars</key>
+			<integer>0</integer>
 			<key>SetupVirtualMap</key>
 			<false/>
 			<key>SignalAppleOS</key>
@@ -456,24 +458,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>NVMeFix.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/NVMeFix</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>USB-B550ITX.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -521,6 +505,42 @@
 				<string></string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>RadeonSensor.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RadeonSensor</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>SMCRadeonGPU.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SMCRadeonGPU</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -1202,7 +1222,7 @@
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideAuxiliary</key>
-			<false/>
+			<true/>
 			<key>LauncherOption</key>
 			<string>Disabled</string>
 			<key>LauncherPath</key>
@@ -1227,11 +1247,11 @@
 		<key>Debug</key>
 		<dict>
 			<key>AppleDebug</key>
-			<true/>
+			<false/>
 			<key>ApplePanic</key>
-			<true/>
+			<false/>
 			<key>DisableWatchDog</key>
-			<true/>
+			<false/>
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
@@ -1281,28 +1301,7 @@
 			<string>Optional</string>
 		</dict>
 		<key>Tools</key>
-		<array>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Auxiliary</key>
-				<true/>
-				<key>Comment</key>
-				<string>Not signed for security reasons</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Flavour</key>
-				<string>OpenShell:UEFIShell:Shell</string>
-				<key>Name</key>
-				<string>UEFI Shell</string>
-				<key>Path</key>
-				<string>OpenShell.efi</string>
-				<key>RealPath</key>
-				<false/>
-				<key>TextMode</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<key>NVRAM</key>
 	<dict>
@@ -1316,7 +1315,7 @@
 				</data>
 				<key>UIScale</key>
 				<data>
-				Ag==
+				AQ==
 				</data>
 			</dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
@@ -1333,11 +1332,15 @@
 				<data>
 				Rg==
 				</data>
+				<key>SystemAudioVolumeDB</key>
+				<data>
+				4g==
+				</data>
 				<key>boot-args</key>
 				<string>-v slide=88 dk.e1000=0 agdpmod=pikera shikigva=80 unfairgva=1</string>
 				<key>csr-active-config</key>
 				<data>
-				7w8AAA==
+				/w8AAA==
 				</data>
 				<key>prev-lang:kbd</key>
 				<string>en-US:0</string>
@@ -1349,7 +1352,6 @@
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<array>
-				<string>UIScale</string>
 				<string>DefaultBackgroundColor</string>
 			</array>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
@@ -1468,6 +1470,12 @@
 			<integer>50</integer>
 			<key>KeySubsequentDelay</key>
 			<integer>5</integer>
+			<key>PointerPollMask</key>
+			<integer>-1</integer>
+			<key>PointerPollMax</key>
+			<integer>80</integer>
+			<key>PointerPollMin</key>
+			<integer>10</integer>
 			<key>PointerSpeedDiv</key>
 			<integer>1</integer>
 			<key>PointerSpeedMul</key>
@@ -1479,20 +1487,24 @@
 			<integer>0</integer>
 			<key>AudioDevice</key>
 			<string>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x4)</string>
-			<key>AudioOut</key>
-			<integer>0</integer>
+			<key>AudioOutMask</key>
+			<integer>-1</integer>
 			<key>AudioSupport</key>
 			<true/>
-			<key>MinimumVolume</key>
-			<integer>40</integer>
+			<key>DisconnectHda</key>
+			<false/>
+			<key>MaximumGain</key>
+			<integer>-15</integer>
+			<key>MinimumAssistGain</key>
+			<integer>-30</integer>
+			<key>MinimumAudibleGain</key>
+			<integer>-55</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
 			<key>ResetTrafficClass</key>
 			<false/>
 			<key>SetupDelay</key>
 			<integer>0</integer>
-			<key>VolumeAmplifier</key>
-			<integer>143</integer>
 		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
@@ -1574,6 +1586,8 @@
 			<false/>
 			<key>ProvideConsoleGop</key>
 			<true/>
+			<key>ReconnectGraphicsOnConnect</key>
+			<false/>
 			<key>ReconnectOnResChange</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
@@ -1584,6 +1598,8 @@
 			<false/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
+			<key>UIScale</key>
+			<integer>0</integer>
 			<key>UgaPassThrough</key>
 			<false/>
 		</dict>
@@ -1634,6 +1650,8 @@
 			<false/>
 			<key>EnableVectorAcceleration</key>
 			<true/>
+			<key>EnableVmx</key>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>ForceOcWriteFlash</key>
@@ -1648,6 +1666,8 @@
 			<false/>
 			<key>RequestBootVarRouting</key>
 			<true/>
+			<key>ResizeGpuBars</key>
+			<integer>0</integer>
 			<key>TscSyncTimeout</key>
 			<integer>0</integer>
 			<key>UnblockFsConnect</key>
