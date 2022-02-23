@@ -12,7 +12,9 @@
   <img src="Docs/CinebenchSingle.png" align=center">
   <img src="Docs/CinebenchMulti.png" align=center">
  </p>
-
+   <p align="center">
+  <img src="Docs/Hackintool-USB.png" align=center">
+ </p>
  ## Specs
 | **Component** | **Model** |
 | ------------- | --------- |
