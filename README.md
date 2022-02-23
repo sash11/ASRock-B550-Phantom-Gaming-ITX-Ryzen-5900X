@@ -26,7 +26,7 @@
 | WiFi & Bluetooth | BCM94360NG Works OOB. Fits into original Intel card slot |
 | Lan |  Intel® 2.5GbE LAN I225-V. Works with boot argument dk.e1000=0 on Big Sur, but not Monterey |
 | OS Disk | 512GB Samsung 970 Pro NVMe |
-| macOS | Big Sur 11.6.3/OpenCore 0.7.7 |
+| macOS | Big Sur 11.6.4/OpenCore 0.7.8 |
 
 ## BIOS
 | **Setting** | **Value** |
