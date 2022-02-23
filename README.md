@@ -15,6 +15,7 @@
    <p align="center">
   <img src="Docs/Hackintool-USB.png" align=center">
  </p>
+ 
  ## Specs
 | **Component** | **Model** |
 | ------------- | --------- |
